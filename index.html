@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blake Solomon Plumbing | Plumber, Gisborne</title>
+<meta name="description" content="Blake Solomon Plumbing is a locally owned plumber in Whataupoko, Gisborne. Taps, hot water cylinders, toilets, bathroom renovations and general plumbing across Tairawhiti. Call 027 250 0842.">
+<meta property="og:title" content="Blake Solomon Plumbing | Plumber, Gisborne">
+<meta property="og:description" content="Gisborne plumbing, sorted properly. Taps, hot water cylinders, toilets and full bathrooms. Call Blake on 027 250 0842.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero-2.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f8f87'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%23f4f8f7' text-anchor='middle'%3EBS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#122b2e;
+  --dark:#0e3438;
+  --dark-2:#0b2a2e;
+  --bone:#f2f7f6;
+  --white:#fbfdfd;
+  --accent:#0f8f87;
+  --accent-deep:#0a6b65;
+  --body:#3c5654;
+  --line:rgba(18,43,46,.12);
+  --radius:14px;
+  --shadow:0 10px 30px rgba(14,52,56,.12);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  font-family:'Karla',sans-serif;
+  font-size:16.5px;
+  line-height:1.7;
+  color:var(--body);
+  background:var(--white);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;image-orientation:from-image}
+h1,h2,h3{font-family:'Outfit',sans-serif;color:var(--ink);line-height:1.12;margin:0 0 .6em}
+h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.85rem,3.6vw,2.6rem);font-weight:700;letter-spacing:-.015em}
+h3{font-size:1.16rem;font-weight:600}
+p{margin:0 0 1em}
+a{color:var(--accent-deep)}
+::selection{background:var(--accent);color:var(--white)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.section{padding:84px 0}
+@media (max-width:760px){.section{padding:60px 0}}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'Outfit',sans-serif;font-weight:600;font-size:1rem;
+  padding:0 26px;height:54px;border-radius:var(--radius);
+  text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent-deep);color:#f5fbfa}
+.btn-accent:hover{background:#07514c;transform:translateY(-2px);box-shadow:0 12px 26px rgba(8,25,27,.35)}
+.btn-ghost{background:rgba(251,253,253,.12);color:#f5fbfa;border:1px solid rgba(251,253,253,.45);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(251,253,253,.22);transform:translateY(-2px)}
+.btn-dark{background:var(--dark);color:#f5fbfa}
+.btn-dark:hover{background:var(--dark-2);transform:translateY(-2px);box-shadow:0 12px 26px rgba(8,25,27,.28)}
+
+/* ---------- opening animation ---------- */
+#intro{
+  position:fixed;inset:0;z-index:200;background:var(--dark);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .6s var(--ease),visibility .6s;
+}
+#intro span{
+  font-family:'Outfit',sans-serif;font-weight:700;font-size:clamp(1.3rem,4vw,2rem);
+  color:#f5fbfa;letter-spacing:.01em;opacity:0;transform:translateY(14px);
+  animation:introIn .7s var(--ease) .1s forwards;
+}
+#intro span b{color:#5ecfc7;font-weight:700}
+@keyframes introIn{to{opacity:1;transform:none}}
+#intro.done{opacity:0;visibility:hidden}
+@media (prefers-reduced-motion:reduce){#intro{display:none}}
+
+/* ---------- nav ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(251,253,253,.85);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{
+  font-family:'Outfit',sans-serif;font-weight:800;font-size:1.14rem;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em;line-height:1.15;
+}
+.logo b{color:var(--accent-deep);font-weight:800}
+footer .logo b{color:#5ecfc7}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{
+  font-family:'Outfit',sans-serif;font-weight:500;font-size:.95rem;
+  color:var(--ink);text-decoration:none;transition:color .2s;
+}
+.nav-links a:hover{color:var(--accent-deep)}
+.nav-phone{
+  display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;
+  background:var(--dark);color:#f5fbfa !important;border-radius:999px;
+  font-size:.92rem !important;font-weight:600 !important;line-height:1;
+  transition:background .2s,transform .2s;
+}
+.nav-phone:hover{background:var(--accent-deep);transform:translateY(-1px);color:#f5fbfa}
+.burger{
+  display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0;
+}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s var(--ease),opacity .3s}
+.mobile-menu{
+  display:none;flex-direction:column;gap:4px;padding:10px 20px 20px;
+  background:rgba(251,253,253,.97);border-bottom:1px solid var(--line);
+}
+.mobile-menu a{
+  font-family:'Outfit',sans-serif;font-weight:600;color:var(--ink);text-decoration:none;
+  padding:13px 4px;border-bottom:1px solid var(--line);font-size:1.05rem;
+}
+.mobile-menu a:last-child{border-bottom:0}
+.mobile-menu .m-call{
+  margin-top:8px;background:var(--accent-deep);color:#f5fbfa;border-radius:var(--radius);
+  text-align:center;border-bottom:0;
+}
+@media (max-width:880px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .mobile-menu.open{display:flex}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  background:var(--dark);overflow:hidden;
+}
+.hero-slide{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1.6s ease;
+}
+.hero-slide.on{opacity:1}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(11,42,46,.55) 0%,rgba(11,42,46,.38) 40%,rgba(11,42,46,.82) 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;padding:150px 0 72px;
+}
+.hero-eyebrow{
+  font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:#7fd8d1;margin:0 0 14px;
+}
+.hero h1{color:#fbfdfd;max-width:13ch;margin-bottom:.4em}
+.hero-sub{color:rgba(244,250,249,.88);max-width:46ch;font-size:1.13rem;margin-bottom:26px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.hero-quote{
+  max-width:460px;border-radius:var(--radius);
+  background:rgba(251,253,253,.1);backdrop-filter:blur(10px);
+  border:1px solid rgba(251,253,253,.22);
+  padding:16px 20px;min-height:118px;
+}
+.hero-quote .stars{color:#ffc94d;font-size:.9rem;letter-spacing:2px;margin-bottom:6px}
+.hero-quote blockquote{
+  margin:0;color:#f0f7f6;font-size:.98rem;line-height:1.55;
+  transition:opacity .5s ease;
+}
+.hero-quote cite{
+  display:block;font-style:normal;color:rgba(240,247,246,.66);
+  font-size:.85rem;margin-top:8px;
+}
+.hero-anim .hero-eyebrow,.hero-anim h1,.hero-anim .hero-sub,.hero-anim .hero-ctas,.hero-anim .hero-quote{
+  opacity:0;transform:translateY(22px);
+  animation:riseIn .8s var(--ease) forwards;
+}
+.hero-anim h1{animation-delay:.12s}
+.hero-anim .hero-sub{animation-delay:.22s}
+.hero-anim .hero-ctas{animation-delay:.32s}
+.hero-anim .hero-quote{animation-delay:.44s}
+@keyframes riseIn{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .hero-anim .hero-eyebrow,.hero-anim h1,.hero-anim .hero-sub,.hero-anim .hero-ctas,.hero-anim .hero-quote{animation:none;opacity:1;transform:none}
+  .hero-slide{transition:none}
+}
+@media (max-width:760px){
+  .hero-inner{padding:120px 0 48px}
+  .hero-sub{font-size:1.04rem}
+}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- services ---------- */
+.services{background:var(--bone)}
+.sec-head{max-width:60ch;margin-bottom:44px}
+.sec-head p{font-size:1.06rem}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc-card{
+  background:var(--white);border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+  display:flex;flex-direction:column;
+}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.svc-card img{
+  width:100%;aspect-ratio:4/3;object-fit:cover;
+  filter:saturate(.85) contrast(1.06);
+}
+.svc-body{padding:20px 22px 24px}
+.svc-tag{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--accent-deep);
+  margin-bottom:8px;
+}
+.svc-tag svg{width:15px;height:15px}
+.svc-body p{font-size:1rem;margin:0}
+@media (max-width:960px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.svc-grid{grid-template-columns:1fr}}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:5fr 6fr;gap:52px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{
+  width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);
+  filter:saturate(.85) contrast(1.06);
+}
+.about-corner{
+  position:absolute;left:-14px;bottom:-14px;
+  background:var(--accent-deep);color:#f5fbfa;border-radius:var(--radius);
+  font-family:'Outfit',sans-serif;font-weight:600;font-size:.9rem;
+  padding:12px 18px;line-height:1.3;box-shadow:var(--shadow);
+}
+.checklist{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.checklist li{display:flex;gap:12px;align-items:flex-start;font-weight:500;color:var(--ink)}
+.checklist svg{flex:none;width:22px;height:22px;color:var(--accent);margin-top:2px}
+@media (max-width:860px){
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-corner{left:12px;bottom:12px}
+}
+
+/* ---------- crew ---------- */
+.crew{background:var(--bone)}
+.badge{
+  display:inline-block;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:600;
+  color:var(--accent-deep);background:rgba(15,143,135,.1);
+  border:1px solid rgba(15,143,135,.25);border-radius:999px;
+  padding:4px 14px;margin-bottom:14px;
+}
+.crew-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:860px}
+.crew-card{
+  display:flex;gap:18px;align-items:flex-start;
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.crew-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.avatar{
+  flex:none;width:62px;height:62px;border-radius:50%;
+  background:var(--dark);border:2px solid var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Outfit',sans-serif;font-weight:700;color:#7fd8d1;font-size:1.2rem;
+}
+.avatar svg{width:26px;height:26px;color:#7fd8d1}
+.crew-card h3{margin-bottom:2px}
+.crew-role{
+  font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent-deep);display:block;margin-bottom:8px;
+}
+.crew-card p{font-size:1rem;margin:0}
+@media (max-width:720px){.crew-grid{grid-template-columns:1fr}}
+
+/* ---------- reviews ---------- */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:34px}
+.rev-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;display:flex;flex-direction:column;gap:12px;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.rev-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.rev-stars{color:#e8a922;letter-spacing:3px;font-size:.95rem}
+.rev-card blockquote{margin:0;color:var(--ink);font-size:1rem;line-height:1.6}
+.rev-meta{margin-top:auto}
+.rev-name{font-family:'Outfit',sans-serif;font-weight:600;color:var(--ink);display:block}
+.rev-src{font-size:.85rem;color:var(--body)}
+.rev-note{font-size:.9rem;max-width:62ch}
+.rev-note a{font-weight:600}
+@media (max-width:880px){.rev-grid{grid-template-columns:1fr}}
+
+/* ---------- review banner ---------- */
+.rev-banner{background:var(--dark);border-radius:0}
+.rev-banner .wrap{
+  display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+  padding-top:56px;padding-bottom:56px;
+}
+.rev-banner h2{color:#fbfdfd;margin:0}
+.rev-banner p{color:rgba(244,250,249,.75);margin:6px 0 0}
+
+/* ---------- contact ---------- */
+.contact{background:var(--bone)}
+.contact-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--shadow);
+}
+.contact-map{min-height:460px}
+.contact-map iframe{width:100%;height:100%;border:0;display:block}
+.contact-info{padding:38px 38px 34px;display:flex;flex-direction:column;gap:10px}
+.contact-info h2{margin-bottom:4px}
+.contact-info>p{margin-bottom:14px}
+.contact-btns{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
+.contact-btns .btn{width:100%}
+.c-row{display:flex;gap:13px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line);font-size:1rem}
+.c-row svg{flex:none;width:20px;height:20px;color:var(--accent);margin-top:3px}
+.c-row a{color:var(--body);text-decoration:none}
+.c-row a:hover{color:var(--accent-deep)}
+.socials{display:flex;gap:12px;margin-top:14px}
+.socials a{
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--ink);
+  transition:background .25s,color .25s,transform .25s;
+}
+.socials a:hover{background:var(--accent-deep);color:#f5fbfa;transform:translateY(-2px)}
+.socials svg{width:19px;height:19px}
+@media (max-width:880px){
+  .contact-card{grid-template-columns:1fr}
+  .contact-map{min-height:320px;order:2}
+  .contact-info{order:1}
+}
+
+/* ---------- footer ---------- */
+footer{background:var(--dark-2);color:rgba(244,250,249,.72);padding:56px 0 30px}
+.foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:38px}
+.foot-brand{max-width:320px}
+.foot-brand .logo{color:#fbfdfd;font-size:1.2rem}
+.foot-brand p{font-size:.94rem;margin-top:10px}
+.foot-links{display:flex;flex-direction:column;gap:9px}
+.foot-links a{color:rgba(244,250,249,.72);text-decoration:none;font-size:.95rem}
+.foot-links a:hover{color:#7fd8d1}
+.foot-head{font-family:'Outfit',sans-serif;font-weight:600;color:#fbfdfd;font-size:.95rem;margin-bottom:4px}
+footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)}
+.foot-base{
+  border-top:1px solid rgba(244,250,249,.14);padding-top:22px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.86rem;
+}
+</style>
+</head>
+<body>
+
+<div id="intro" aria-hidden="true"><span>Blake Solomon <b>Plumbing</b></span></div>
+
+<header>
+  <nav class="nav wrap" aria-label="Main">
+    <a class="logo" href="#top">Blake Solomon <b>Plumbing</b></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-phone" href="tel:+64272500842">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        027 250 0842
+      </a>
+    </div>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a class="m-call" href="tel:+64272500842">Call 027 250 0842</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-slide on" style="background-image:url('img/hero-1.jpg')" role="img" aria-label="Chrome bath mixer and hand shower over a white bath"></div>
+    <div class="hero-slide" style="background-image:url('img/hero-2.jpg')" role="img" aria-label="Newly renovated bathroom with glass shower and double vanity"></div>
+    <div class="hero-inner wrap hero-anim">
+      <p class="hero-eyebrow">Plumber in Gisborne</p>
+      <h1>Gisborne plumbing, sorted properly.</h1>
+      <p class="hero-sub">Leaking tap, cold shower or a full bathroom rebuild: Blake turns up, quotes it straight and gets it done.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-accent" href="tel:+64272500842">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 027 250 0842
+        </a>
+        <a class="btn btn-ghost" href="#contact">Get a quote</a>
+      </div>
+      <div class="hero-quote" id="heroQuote" aria-live="polite">
+        <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote id="quoteText">Fantastic plumber. Great friendly service, and very knowledgeable. I would highly recommend.</blockquote>
+        <cite id="quoteName">Verified customer, Yellow NZ</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>What Blake can sort for you</h2>
+        <p>From ten-minute fixes to full renovations, priced up front and left tidy.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc-card reveal">
+          <img src="img/svc-taps.jpg" alt="Kitchen tap running with water" width="900" height="600" loading="lazy">
+          <div class="svc-body">
+            <span class="svc-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+              Repairs
+            </span>
+            <h3>Leaking taps &amp; mixers</h3>
+            <p>Dripping tap or a mixer past its best? Washers, cartridges and full replacements, fitted without fuss.</p>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="img/svc-hotwater.jpg" alt="Water splashing from a kitchen mixer into a glass" width="900" height="1350" loading="lazy">
+          <div class="svc-body">
+            <span class="svc-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v2m4-2v2m4-2v2M5 8h14a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a1 1 0 0 1 1-1z"/></svg>
+              Hot water
+            </span>
+            <h3>Hot water cylinders</h3>
+            <p>Cold showers get old fast. Cylinder swaps, element and thermostat fixes, and honest advice on sizing.</p>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="img/svc-toilets.jpg" alt="White bathroom with pedestal basin and toilet" width="900" height="1350" loading="lazy">
+          <div class="svc-body">
+            <span class="svc-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
+              Toilets
+            </span>
+            <h3>Toilets &amp; cisterns</h3>
+            <p>Running, blocked or rocking on the floor. Repairs where they make sense, replacements where they don't.</p>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="img/svc-bathrooms.jpg" alt="Freestanding bath and basin in a renovated bathroom" width="900" height="601" loading="lazy">
+          <div class="svc-body">
+            <span class="svc-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16a1 1 0 0 1 1 1 6 6 0 0 1-6 6H9a6 6 0 0 1-6-6 1 1 0 0 1 1-1zM6 12V5a2 2 0 0 1 4 0"/></svg>
+              Bathrooms
+            </span>
+            <h3>Bathroom renovations</h3>
+            <p>Full strip-outs to final fit-off. Blake works in with your builder and tiler so plumbing never holds the job up.</p>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="img/svc-maintenance.jpg" alt="Grey tiled bathroom with twin basins and freestanding bath" width="1200" height="800" loading="lazy">
+          <div class="svc-body">
+            <span class="svc-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              Maintenance
+            </span>
+            <h3>General maintenance</h3>
+            <p>Small jobs welcome. Slow drains, noisy pipes, dodgy spouting and the list of little fixes you've been putting off.</p>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="img/svc-newbuilds.jpg" alt="Modern timber-clad home at dusk" width="900" height="600" loading="lazy">
+          <div class="svc-body">
+            <span class="svc-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 9.5V21h5v-6h4v6h5V9.5"/></svg>
+              New builds
+            </span>
+            <h3>New builds &amp; renovations</h3>
+            <p>Pipework planned and priced from your plans, roughed in on schedule and signed off without drama.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo reveal">
+        <img src="img/about.jpg" alt="Tradesman brazing a pipe joint with sparks" width="900" height="600" loading="lazy">
+        <div class="about-corner">Whataupoko,<br>Gisborne</div>
+      </div>
+      <div class="reveal">
+        <h2>The local on the other end of the phone</h2>
+        <p>Blake Solomon Plumbing is run from Whataupoko and works right across Gisborne and the coast. You deal with Blake from the first call to the final invoice: one plumber who knows your job, not a call centre.</p>
+        <p>Most work here comes from repeat customers and word of mouth around town. That only happens when jobs are done once, done properly and left clean.</p>
+        <ul class="checklist">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            Locally owned and run in Gisborne
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            Straight quotes before the work starts
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            Tidy workmanship, guaranteed
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREW -->
+  <section class="section crew" id="crew">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="badge">Example team</span>
+        <h2>Who turns up to your place</h2>
+      </div>
+      <div class="crew-grid">
+        <article class="crew-card reveal">
+          <div class="avatar">BS</div>
+          <div>
+            <h3>Blake Solomon</h3>
+            <span class="crew-role">Owner / Operator</span>
+            <p>Your first call and the one on the tools. Blake quotes the job, books it and does the work himself.</p>
+          </div>
+        </article>
+        <article class="crew-card reveal">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20M4 18v-3a8 8 0 0 1 5-7.4V6a3 3 0 0 1 6 0v1.6a8 8 0 0 1 5 7.4v3"/></svg>
+          </div>
+          <div>
+            <h3>Extra hands</h3>
+            <span class="crew-role">Bigger jobs</span>
+            <p>For bathroom rebuilds and new builds, trusted local trades join the job so it keeps moving.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section" id="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>What customers say</h2>
+      </div>
+      <div class="rev-grid">
+        <article class="rev-card reveal">
+          <div class="rev-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Fantastic plumber. Great friendly service, and very knowledgeable. I would highly recommend."</blockquote>
+          <div class="rev-meta">
+            <span class="rev-name">Verified customer</span>
+            <span class="rev-src">Review on Yellow NZ</span>
+          </div>
+        </article>
+        <article class="rev-card reveal">
+          <div class="rev-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Rang about our hot water cylinder at 8am and Blake had it swapped by the afternoon. Fair price, and he left the cupboard cleaner than he found it."</blockquote>
+          <div class="rev-meta">
+            <span class="rev-name">Marama T.</span>
+            <span class="rev-src">Kaiti (example review)</span>
+          </div>
+        </article>
+        <article class="rev-card reveal">
+          <div class="rev-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Blake replumbed our ensuite during the reno. Turned up when he said he would, every single time. You learn not to take that for granted."</blockquote>
+          <div class="rev-meta">
+            <span class="rev-name">Steve H.</span>
+            <span class="rev-src">Wainui (example review)</span>
+          </div>
+        </article>
+      </div>
+      <p class="rev-note reveal">The starred examples above show how this section works once connected to Google. The Yellow review is real. <a href="https://www.google.com/maps/search/?api=1&amp;query=Blake%20Solomon%20Plumbing%20Gisborne" target="_blank" rel="noopener">See our Google reviews</a></p>
+      <div class="reveal" style="margin-top:18px">
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Blake%20Solomon%20Plumbing%20Gisborne" target="_blank" rel="noopener">See all our Google reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW BANNER -->
+  <section class="rev-banner">
+    <div class="wrap">
+      <div>
+        <h2>Had Blake around recently?</h2>
+        <p>A quick Google review helps other Gisborne locals find a plumber they can trust.</p>
+      </div>
+      <a class="btn btn-accent" href="https://www.google.com/maps/search/?api=1&amp;query=Blake%20Solomon%20Plumbing%20Gisborne" target="_blank" rel="noopener">Leave us a review</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <div class="contact-map">
+          <iframe title="Map showing Blake Solomon Plumbing, 202 Whitaker Street, Whataupoko, Gisborne" src="https://www.google.com/maps?q=Blake+Solomon+Plumbing,+202+Whitaker+Street,+Whataupoko,+Gisborne+4010&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-info">
+          <h2>Get Blake on the phone</h2>
+          <p>Call for anything urgent. For quotes, flick through an email with a couple of photos and a rough idea of the job.</p>
+          <div class="contact-btns">
+            <a class="btn btn-accent" href="tel:+64272500842">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Blake Solomon Plumbing
+            </a>
+            <a class="btn btn-dark" data-gmail data-user="blake" data-domain="bsp.co.nz" data-su="Plumbing%20quote" href="#contact">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              Email Blake Solomon Plumbing
+            </a>
+          </div>
+          <div class="c-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+64272500842">027 250 0842</a>
+          </div>
+          <div class="c-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <a data-gmail data-user="blake" data-domain="bsp.co.nz" href="#contact"><span data-email-text>Email us</span></a>
+          </div>
+          <div class="c-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>202 Whitaker Street, Whataupoko, Gisborne 4010</span>
+          </div>
+          <div class="c-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>Servicing Gisborne and wider Tairawhiti</span>
+          </div>
+          <div class="socials">
+            <a href="https://www.facebook.com/search/top?q=Blake%20Solomon%20Plumbing" target="_blank" rel="noopener" aria-label="Find Blake Solomon Plumbing on Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/explore/search/keyword/?q=Blake%20Solomon%20Plumbing" target="_blank" rel="noopener" aria-label="Find Blake Solomon Plumbing on Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top">Blake Solomon <b>Plumbing</b></a>
+        <p>Locally owned plumbing for homes across Gisborne and Tairawhiti. One call, one plumber, job done.</p>
+      </div>
+      <div class="foot-links">
+        <span class="foot-head">Site</span>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-links">
+        <span class="foot-head">Legal</span>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div>
+        <span class="foot-head">Follow</span>
+        <div class="socials">
+          <a href="https://www.facebook.com/search/top?q=Blake%20Solomon%20Plumbing" target="_blank" rel="noopener" aria-label="Find Blake Solomon Plumbing on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/explore/search/keyword/?q=Blake%20Solomon%20Plumbing" target="_blank" rel="noopener" aria-label="Find Blake Solomon Plumbing on Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; <span id="year">2026</span> Blake Solomon Plumbing. All rights reserved.</span>
+      <span>202 Whitaker Street, Whataupoko, Gisborne</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* intro overlay */
+  var intro=document.getElementById('intro');
+  if(intro){
+    window.addEventListener('load',function(){
+      setTimeout(function(){intro.classList.add('done');},900);
+    });
+    setTimeout(function(){intro.classList.add('done');},2200);
+  }
+
+  /* hero slide rotation */
+  var slides=document.querySelectorAll('.hero-slide');
+  if(slides.length>1&&!reduced){
+    var s=0;
+    setInterval(function(){
+      slides[s].classList.remove('on');
+      s=(s+1)%slides.length;
+      slides[s].classList.add('on');
+    },6000);
+  }
+
+  /* hero review quote rotation */
+  var quotes=[
+    {t:"Fantastic plumber. Great friendly service, and very knowledgeable. I would highly recommend.",n:"Verified customer, Yellow NZ"},
+    {t:"Rang about our hot water cylinder at 8am and Blake had it swapped by the afternoon.",n:"Marama T., Kaiti (example)"},
+    {t:"Turned up when he said he would, every single time. You learn not to take that for granted.",n:"Steve H., Wainui (example)"}
+  ];
+  var qt=document.getElementById('quoteText'),qn=document.getElementById('quoteName');
+  if(qt&&qn&&!reduced){
+    var qi=0;
+    setInterval(function(){
+      qt.style.opacity='0';qn.style.opacity='0';
+      setTimeout(function(){
+        qi=(qi+1)%quotes.length;
+        qt.textContent=quotes[qi].t;
+        qn.textContent=quotes[qi].n;
+        qt.style.opacity='1';qn.style.opacity='1';
+      },500);
+    },6500);
+  }
+
+  /* scroll reveals */
+  var revs=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!reduced){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    revs.forEach(function(el){io.observe(el);});
+  }else{
+    revs.forEach(function(el){el.classList.add('in');});
+  }
+
+  /* mobile menu */
+  var burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
+  if(burger&&menu){
+    burger.addEventListener('click',function(){
+      var open=menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded',open?'true':'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');});
+    });
+  }
+
+  /* gmail buttons */
+  document.querySelectorAll('a[data-gmail]').forEach(function(a){
+    var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');
+    a.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+(a.getAttribute('data-su')||'')+'&body='+(a.getAttribute('data-body')||'');
+    a.target='_blank';a.rel='noopener';
+    var t=a.querySelector('[data-email-text]');
+    if(t){t.textContent=to;}
+  });
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
