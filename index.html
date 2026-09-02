@@ -8,24 +8,24 @@
 <meta property="og:title" content="Blake Solomon Plumbing | Plumber, Gisborne">
 <meta property="og:description" content="Gisborne plumbing, sorted properly. Taps, hot water cylinders, toilets and full bathrooms. Call Blake on 027 250 0842.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="img/hero-2.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f8f87'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%23f4f8f7' text-anchor='middle'%3EBS%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="img/hero-van.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1e21'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='27' font-weight='700' fill='%23ffffff' text-anchor='middle' letter-spacing='-1'%3Ebsp%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#122b2e;
-  --dark:#0e3438;
-  --dark-2:#0b2a2e;
-  --bone:#f2f7f6;
-  --white:#fbfdfd;
-  --accent:#0f8f87;
-  --accent-deep:#0a6b65;
-  --body:#3c5654;
-  --line:rgba(18,43,46,.12);
+  --ink:#17181a;
+  --dark:#1c1e21;
+  --dark-2:#111214;
+  --bone:#f1f2f3;
+  --white:#ffffff;
+  --accent:#5c6167;
+  --accent-deep:#26282b;
+  --body:#54585d;
+  --line:rgba(23,24,26,.13);
   --radius:14px;
-  --shadow:0 10px 30px rgba(14,52,56,.12);
+  --shadow:0 10px 30px rgba(17,18,20,.14);
   --ease:cubic-bezier(.16,1,.3,1);
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -64,12 +64,12 @@ a{color:var(--accent-deep)}
 }
 .btn:active{transform:translateY(1px) scale(.98)}
 .btn svg{flex:none}
-.btn-accent{background:var(--accent-deep);color:#f5fbfa}
-.btn-accent:hover{background:#07514c;transform:translateY(-2px);box-shadow:0 12px 26px rgba(8,25,27,.35)}
-.btn-ghost{background:rgba(251,253,253,.12);color:#f5fbfa;border:1px solid rgba(251,253,253,.45);backdrop-filter:blur(6px)}
-.btn-ghost:hover{background:rgba(251,253,253,.22);transform:translateY(-2px)}
-.btn-dark{background:var(--dark);color:#f5fbfa}
-.btn-dark:hover{background:var(--dark-2);transform:translateY(-2px);box-shadow:0 12px 26px rgba(8,25,27,.28)}
+.btn-accent{background:var(--accent-deep);color:#f7f8f9}
+.btn-accent:hover{background:#0a0b0c;transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.32)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#f7f8f9;border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.btn-dark{background:var(--dark);color:#f7f8f9}
+.btn-dark:hover{background:var(--dark-2);transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.26)}
 
 /* ---------- opening animation ---------- */
 #intro{
@@ -79,10 +79,10 @@ a{color:var(--accent-deep)}
 }
 #intro span{
   font-family:'Outfit',sans-serif;font-weight:700;font-size:clamp(1.3rem,4vw,2rem);
-  color:#f5fbfa;letter-spacing:.01em;opacity:0;transform:translateY(14px);
+  color:#f7f8f9;letter-spacing:.01em;opacity:0;transform:translateY(14px);
   animation:introIn .7s var(--ease) .1s forwards;
 }
-#intro span b{color:#5ecfc7;font-weight:700}
+#intro span b{color:#c9ced3;font-weight:700}
 @keyframes introIn{to{opacity:1;transform:none}}
 #intro.done{opacity:0;visibility:hidden}
 @media (prefers-reduced-motion:reduce){#intro{display:none}}
@@ -90,7 +90,7 @@ a{color:var(--accent-deep)}
 /* ---------- nav ---------- */
 header{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(251,253,253,.85);backdrop-filter:blur(12px);
+  background:rgba(255,255,255,.85);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
@@ -99,7 +99,7 @@ header{
   text-decoration:none;letter-spacing:-.01em;line-height:1.15;
 }
 .logo b{color:var(--accent-deep);font-weight:800}
-footer .logo b{color:#5ecfc7}
+footer .logo b{color:#c9ced3}
 .nav-links{display:flex;gap:26px;align-items:center}
 .nav-links a{
   font-family:'Outfit',sans-serif;font-weight:500;font-size:.95rem;
@@ -108,11 +108,11 @@ footer .logo b{color:#5ecfc7}
 .nav-links a:hover{color:var(--accent-deep)}
 .nav-phone{
   display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;
-  background:var(--dark);color:#f5fbfa !important;border-radius:999px;
+  background:var(--dark);color:#f7f8f9 !important;border-radius:999px;
   font-size:.92rem !important;font-weight:600 !important;line-height:1;
   transition:background .2s,transform .2s;
 }
-.nav-phone:hover{background:var(--accent-deep);transform:translateY(-1px);color:#f5fbfa}
+.nav-phone:hover{background:var(--accent-deep);transform:translateY(-1px);color:#f7f8f9}
 .burger{
   display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;
   flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0;
@@ -120,7 +120,7 @@ footer .logo b{color:#5ecfc7}
 .burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s var(--ease),opacity .3s}
 .mobile-menu{
   display:none;flex-direction:column;gap:4px;padding:10px 20px 20px;
-  background:rgba(251,253,253,.97);border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);
 }
 .mobile-menu a{
   font-family:'Outfit',sans-serif;font-weight:600;color:var(--ink);text-decoration:none;
@@ -128,7 +128,7 @@ footer .logo b{color:#5ecfc7}
 }
 .mobile-menu a:last-child{border-bottom:0}
 .mobile-menu .m-call{
-  margin-top:8px;background:var(--accent-deep);color:#f5fbfa;border-radius:var(--radius);
+  margin-top:8px;background:var(--accent-deep);color:#f7f8f9;border-radius:var(--radius);
   text-align:center;border-bottom:0;
 }
 @media (max-width:880px){
@@ -149,27 +149,27 @@ footer .logo b{color:#5ecfc7}
 .hero-slide.on{opacity:1}
 .hero::after{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(11,42,46,.55) 0%,rgba(11,42,46,.38) 40%,rgba(11,42,46,.82) 100%);
+  background:linear-gradient(180deg,rgba(15,16,18,.52) 0%,rgba(15,16,18,.34) 40%,rgba(15,16,18,.84) 100%);
 }
 .hero-inner{
   position:relative;z-index:2;width:100%;padding:150px 0 72px;
 }
 .hero-eyebrow{
   font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.14em;
-  text-transform:uppercase;color:#7fd8d1;margin:0 0 14px;
+  text-transform:uppercase;color:#c9ced3;margin:0 0 14px;
 }
-.hero h1{color:#fbfdfd;max-width:13ch;margin-bottom:.4em}
-.hero-sub{color:rgba(244,250,249,.88);max-width:46ch;font-size:1.13rem;margin-bottom:26px}
+.hero h1{color:#ffffff;max-width:13ch;margin-bottom:.4em}
+.hero-sub{color:rgba(247,248,249,.88);max-width:46ch;font-size:1.13rem;margin-bottom:26px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
 .hero-quote{
   max-width:460px;border-radius:var(--radius);
-  background:rgba(9,33,36,.55);backdrop-filter:blur(10px);
-  border:1px solid rgba(251,253,253,.22);
+  background:rgba(17,18,20,.58);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.22);
   padding:16px 20px;min-height:118px;
 }
-.hero-quote .stars{color:#ffc94d;font-size:.9rem;letter-spacing:2px;margin-bottom:6px}
+.hero-quote .stars{color:#d5d9dd;font-size:.9rem;letter-spacing:2px;margin-bottom:6px}
 .hero-quote blockquote{
-  margin:0;color:#f0f7f6;font-size:.98rem;line-height:1.55;
+  margin:0;color:#f3f4f5;font-size:.98rem;line-height:1.55;
   transition:opacity .5s ease;
 }
 .hero-quote cite{
@@ -213,7 +213,7 @@ footer .logo b{color:#5ecfc7}
 .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .svc-card img{
   width:100%;aspect-ratio:4/3;object-fit:cover;
-  filter:saturate(.85) contrast(1.06);
+  filter:grayscale(1) contrast(1.03);
 }
 .svc-body{padding:20px 22px 24px}
 .svc-tag{
@@ -232,11 +232,11 @@ footer .logo b{color:#5ecfc7}
 .about-photo{position:relative}
 .about-photo img{
   width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);
-  filter:saturate(.85) contrast(1.06);
+  filter:grayscale(1) contrast(1.03);
 }
 .about-corner{
   position:absolute;left:-14px;bottom:-14px;
-  background:var(--accent-deep);color:#f5fbfa;border-radius:var(--radius);
+  background:var(--accent-deep);color:#f7f8f9;border-radius:var(--radius);
   font-family:'Outfit',sans-serif;font-weight:600;font-size:.9rem;
   padding:12px 18px;line-height:1.3;box-shadow:var(--shadow);
 }
@@ -252,8 +252,8 @@ footer .logo b{color:#5ecfc7}
 .crew{background:var(--bone)}
 .badge{
   display:inline-block;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:600;
-  color:var(--accent-deep);background:rgba(15,143,135,.1);
-  border:1px solid rgba(15,143,135,.25);border-radius:999px;
+  color:var(--accent-deep);background:rgba(23,24,26,.06);
+  border:1px solid rgba(23,24,26,.18);border-radius:999px;
   padding:4px 14px;margin-bottom:14px;
 }
 .crew-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:860px}
@@ -267,9 +267,9 @@ footer .logo b{color:#5ecfc7}
   flex:none;width:62px;height:62px;border-radius:50%;
   background:var(--dark);border:2px solid var(--accent);
   display:flex;align-items:center;justify-content:center;
-  font-family:'Outfit',sans-serif;font-weight:700;color:#7fd8d1;font-size:1.2rem;
+  font-family:'Outfit',sans-serif;font-weight:700;color:#c9ced3;font-size:1.2rem;
 }
-.avatar svg{width:26px;height:26px;color:#7fd8d1}
+.avatar svg{width:26px;height:26px;color:#c9ced3}
 .crew-card h3{margin-bottom:2px}
 .crew-role{
   font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.1em;
@@ -286,7 +286,7 @@ footer .logo b{color:#5ecfc7}
   transition:transform .35s var(--ease),box-shadow .35s var(--ease);
 }
 .rev-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.rev-stars{color:#e8a922;letter-spacing:3px;font-size:.95rem}
+.rev-stars{color:#2b2d30;letter-spacing:3px;font-size:.95rem}
 .rev-card blockquote{margin:0;color:var(--ink);font-size:1rem;line-height:1.6}
 .rev-meta{margin-top:auto}
 .rev-name{font-family:'Outfit',sans-serif;font-weight:600;color:var(--ink);display:block}
@@ -301,8 +301,8 @@ footer .logo b{color:#5ecfc7}
   display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
   padding-top:56px;padding-bottom:56px;
 }
-.rev-banner h2{color:#fbfdfd;margin:0}
-.rev-banner p{color:rgba(244,250,249,.75);margin:6px 0 0}
+.rev-banner h2{color:#ffffff;margin:0}
+.rev-banner p{color:rgba(247,248,249,.75);margin:6px 0 0}
 
 /* ---------- contact ---------- */
 .contact{background:var(--bone)}
@@ -327,7 +327,7 @@ footer .logo b{color:#5ecfc7}
   display:flex;align-items:center;justify-content:center;color:var(--ink);
   transition:background .25s,color .25s,transform .25s;
 }
-.socials a:hover{background:var(--accent-deep);color:#f5fbfa;transform:translateY(-2px)}
+.socials a:hover{background:var(--accent-deep);color:#f7f8f9;transform:translateY(-2px)}
 .socials svg{width:19px;height:19px}
 @media (max-width:880px){
   .contact-card{grid-template-columns:1fr}
@@ -336,29 +336,62 @@ footer .logo b{color:#5ecfc7}
 }
 
 /* ---------- footer ---------- */
-footer{background:var(--dark-2);color:rgba(244,250,249,.72);padding:56px 0 30px}
+footer{background:var(--dark-2);color:rgba(247,248,249,.72);padding:56px 0 30px}
 .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:38px}
 .foot-brand{max-width:320px}
-.foot-brand .logo{color:#fbfdfd;font-size:1.2rem}
+.foot-brand .logo{color:#ffffff;font-size:1.2rem}
 .foot-brand p{font-size:.94rem;margin-top:10px}
 .foot-links{display:flex;flex-direction:column;gap:9px}
-.foot-links a{color:rgba(244,250,249,.72);text-decoration:none;font-size:.95rem}
-.foot-links a:hover{color:#7fd8d1}
-.foot-head{font-family:'Outfit',sans-serif;font-weight:600;color:#fbfdfd;font-size:.95rem;margin-bottom:4px}
-footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)}
+.foot-links a{color:rgba(247,248,249,.72);text-decoration:none;font-size:.95rem}
+.foot-links a:hover{color:#c9ced3}
+.foot-head{font-family:'Outfit',sans-serif;font-weight:600;color:#ffffff;font-size:.95rem;margin-bottom:4px}
+footer .socials a{border-color:rgba(247,248,249,.25);color:rgba(247,248,249,.85)}
 .foot-base{
-  border-top:1px solid rgba(244,250,249,.14);padding-top:22px;
+  border-top:1px solid rgba(247,248,249,.14);padding-top:22px;
   display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.86rem;
 }
+
+/* ---------- bsp logo lockups ---------- */
+.logo{display:inline-flex;align-items:center;gap:11px}
+.logo img{height:26px;width:auto;display:block}
+.logo .logo-text{display:flex;flex-direction:column;line-height:1.05}
+.logo .logo-text span{font-size:.66rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--body)}
+footer .logo img{height:32px}
+footer .logo .logo-text span{color:rgba(247,248,249,.62)}
+#intro img{width:min(230px,52vw);height:auto;opacity:0;transform:translateY(14px);animation:introIn .7s var(--ease) .1s forwards}
+#intro .intro-sub{
+  position:absolute;bottom:calc(50% - 92px);left:0;right:0;text-align:center;
+  font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(247,248,249,.55);
+  opacity:0;animation:introIn .7s var(--ease) .3s forwards;
+}
+.hero-badge{
+  position:absolute;top:96px;right:max(20px,calc(50% - 540px));z-index:2;
+  background:rgba(17,18,20,.5);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.2);border-radius:var(--radius);
+  padding:14px 18px;display:flex;align-items:center;gap:12px;
+}
+.hero-badge img{height:30px;width:auto}
+.hero-badge span{
+  font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(247,248,249,.8);max-width:9ch;line-height:1.35;
+}
+@media (max-width:760px){.hero-badge{display:none}}
 </style>
 </head>
 <body>
 
-<div id="intro" aria-hidden="true"><span>Blake Solomon <b>Plumbing</b></span></div>
+<div id="intro" aria-hidden="true">
+  <img src="img/bsp-logo-light.png" alt="" width="900" height="557">
+  <p class="intro-sub">Blake Solomon Plumbing</p>
+</div>
 
 <header>
   <nav class="nav wrap" aria-label="Main">
-    <a class="logo" href="#top">Blake Solomon <b>Plumbing</b></a>
+    <a class="logo" href="#top" aria-label="Blake Solomon Plumbing, home">
+      <img src="img/bsp-logo-dark.png" alt="" width="900" height="557">
+      <span class="logo-text"><span>Blake Solomon Plumbing</span></span>
+    </a>
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#about">About</a>
@@ -386,8 +419,13 @@ footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-slide on" style="background-image:url('img/hero-1.jpg')" role="img" aria-label="Chrome bath mixer and hand shower over a white bath"></div>
-    <div class="hero-slide" style="background-image:url('img/hero-2.jpg')" role="img" aria-label="Newly renovated bathroom with glass shower and double vanity"></div>
+    <div class="hero-slide on" style="background-image:url('img/hero-van.jpg')" role="img" aria-label="Two branded bsp plumbing vans parked at the Gisborne workshop"></div>
+    <div class="hero-slide" style="background-image:url('img/hero-1.jpg')" role="img" aria-label="Plumber brazing a copper pipe joint"></div>
+    <div class="hero-slide" style="background-image:url('img/hero-2.jpg')" role="img" aria-label="Run of galvanised plumbing pipework and fittings"></div>
+    <div class="hero-badge">
+      <img src="img/bsp-logo-light.png" alt="bsp" width="900" height="557">
+      <span>Plumbing Drainage Gasfitting</span>
+    </div>
     <div class="hero-inner wrap hero-anim">
       <p class="hero-eyebrow">Plumber in Gisborne</p>
       <h1>Gisborne plumbing, sorted properly.</h1>
@@ -416,7 +454,7 @@ footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)
       </div>
       <div class="svc-grid">
         <article class="svc-card reveal">
-          <img src="img/svc-taps.jpg" alt="Kitchen tap running with water" width="900" height="600" loading="lazy">
+          <img src="img/svc-taps.jpg" alt="Close-up of a dripping chrome mixer tap" width="1000" height="750" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
@@ -427,7 +465,7 @@ footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-hotwater.jpg" alt="Water splashing from a kitchen mixer into a glass" width="900" height="1350" loading="lazy">
+          <img src="img/svc-hotwater.jpg" alt="Plumber working on the pipework of a hot water cylinder" width="1000" height="750" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v2m4-2v2m4-2v2M5 8h14a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a1 1 0 0 1 1-1z"/></svg>
@@ -438,7 +476,7 @@ footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-toilets.jpg" alt="White bathroom with pedestal basin and toilet" width="900" height="1350" loading="lazy">
+          <img src="img/svc-toilets.jpg" alt="Plumber servicing a toilet cistern in a bathroom" width="1000" height="750" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
@@ -449,7 +487,7 @@ footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-bathrooms.jpg" alt="Freestanding bath and basin in a renovated bathroom" width="900" height="601" loading="lazy">
+          <img src="img/svc-bathrooms.jpg" alt="Chrome bath mixer and hand shower fitted to a bath" width="1000" height="750" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16a1 1 0 0 1 1 1 6 6 0 0 1-6 6H9a6 6 0 0 1-6-6 1 1 0 0 1 1-1zM6 12V5a2 2 0 0 1 4 0"/></svg>
@@ -460,7 +498,7 @@ footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-maintenance.jpg" alt="Grey tiled bathroom with twin basins and freestanding bath" width="1200" height="800" loading="lazy">
+          <img src="img/svc-maintenance.jpg" alt="Tray of plumbing spanners and wrenches" width="1000" height="750" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
@@ -471,7 +509,7 @@ footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-newbuilds.jpg" alt="Modern timber-clad home at dusk" width="900" height="600" loading="lazy">
+          <img src="img/svc-newbuilds.jpg" alt="Plumber connecting waste pipework under a new basin" width="1000" height="750" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 9.5V21h5v-6h4v6h5V9.5"/></svg>
@@ -489,7 +527,7 @@ footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)
   <section class="section" id="about">
     <div class="wrap about-grid">
       <div class="about-photo reveal">
-        <img src="img/about.jpg" alt="Tradesman brazing a pipe joint with sparks" width="900" height="600" loading="lazy">
+        <img src="img/about.jpg" alt="The two branded bsp plumbing vans outside the Gisborne workshop" width="1200" height="900" loading="lazy">
         <div class="about-corner">Whataupoko,<br>Gisborne</div>
       </div>
       <div class="reveal">
@@ -649,7 +687,10 @@ footer .socials a{border-color:rgba(244,250,249,.25);color:rgba(244,250,249,.85)
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="logo" href="#top">Blake Solomon <b>Plumbing</b></a>
+        <a class="logo" href="#top" aria-label="Blake Solomon Plumbing, home">
+          <img src="img/bsp-logo-light.png" alt="" width="900" height="557">
+          <span class="logo-text"><span>Blake Solomon Plumbing</span></span>
+        </a>
         <p>Locally owned plumbing for homes across Gisborne and Tairawhiti. One call, one plumber, job done.</p>
       </div>
       <div class="foot-links">
