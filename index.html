@@ -3,13 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Blake Solomon Plumbing | Plumber, Gisborne</title>
-<meta name="description" content="Blake Solomon Plumbing is a locally owned plumber in Whataupoko, Gisborne. Taps, hot water cylinders, toilets, bathroom renovations and general plumbing across Tairawhiti. Call 027 250 0842.">
+<meta name="description" content="Blake Solomon Plumbing is a locally owned plumber in Whataupoko, Gisborne. Taps, hot water, toilets, bathrooms, gasfitting and drainlaying across Tairawhiti. Call 027 250 0842.">
 <meta property="og:title" content="Blake Solomon Plumbing | Plumber, Gisborne">
 <meta property="og:description" content="Gisborne plumbing, sorted properly. Taps, hot water cylinders, toilets and full bathrooms. Call Blake on 027 250 0842.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="img/hero-van.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1e21'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='27' font-weight='700' fill='%23ffffff' text-anchor='middle' letter-spacing='-1'%3Ebsp%3C/text%3E%3C/svg%3E">
+<meta property="og:url" content="https://blake-solomon-plumbing-demo.vercel.app/">
+<meta property="og:image" content="https://blake-solomon-plumbing-demo.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -69,6 +75,8 @@ a{color:var(--accent-deep)}
 .btn-ghost{background:rgba(255,255,255,.12);color:#f7f8f9;border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(6px)}
 .btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
 .btn-dark{background:var(--dark);color:#f7f8f9}
+.btn-light{background:#f7f8f9;color:var(--ink)}
+.btn-light:hover{background:#ffffff;transform:translateY(-2px)}
 .btn-dark:hover{background:var(--dark-2);transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.26)}
 
 /* ---------- opening animation ---------- */
@@ -142,17 +150,29 @@ footer .logo b{color:#c9ced3}
   position:relative;min-height:100svh;display:flex;align-items:flex-end;
   background:var(--dark);overflow:hidden;
 }
+.hero-slides{position:absolute;inset:0}
 .hero-slide{
-  position:absolute;inset:0;background-size:cover;background-position:center;
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;
   opacity:0;transition:opacity 1.6s ease;
 }
 .hero-slide.on{opacity:1}
+.hero-pause{
+  position:absolute;z-index:3;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;
+  background:rgba(17,18,20,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.35);
+  color:#f7f8f9;display:grid;place-items:center;cursor:pointer;transition:background .2s;
+}
+.hero-pause:hover{background:rgba(17,18,20,.8)}
+.hero-pause:focus-visible{outline:2px solid #ffffff;outline-offset:3px}
+.hero-pause svg{width:18px;height:18px}
+.hero-pause .i-play{display:none}
+.hero-pause[aria-pressed="true"] .i-play{display:block}
+.hero-pause[aria-pressed="true"] .i-pause{display:none}
 .hero::after{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(15,16,18,.52) 0%,rgba(15,16,18,.34) 40%,rgba(15,16,18,.84) 100%);
+  background:linear-gradient(90deg,rgba(15,16,18,.62) 0%,rgba(15,16,18,.3) 55%,rgba(15,16,18,0) 100%),linear-gradient(180deg,rgba(15,16,18,.5) 0%,rgba(15,16,18,.3) 40%,rgba(15,16,18,.84) 100%);
 }
 .hero-inner{
-  position:relative;z-index:2;width:100%;padding:150px 0 72px;
+  position:relative;z-index:2;width:100%;padding:150px 20px 72px;
 }
 .hero-eyebrow{
   font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.14em;
@@ -161,36 +181,31 @@ footer .logo b{color:#c9ced3}
 .hero h1{color:#ffffff;max-width:13ch;margin-bottom:.4em}
 .hero-sub{color:rgba(247,248,249,.88);max-width:46ch;font-size:1.13rem;margin-bottom:26px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
-.hero-quote{
-  max-width:460px;border-radius:var(--radius);
-  background:rgba(17,18,20,.58);backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,.22);
-  padding:16px 20px;min-height:118px;
+.hero-rating{
+  display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:100%;
+  border-radius:999px;padding:10px 18px;text-decoration:none;
+  background:rgba(255,255,255,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.3);color:#f3f4f5;font-size:.95rem;line-height:1.4;
 }
-.hero-quote .stars{color:#d5d9dd;font-size:.9rem;letter-spacing:2px;margin-bottom:6px}
-.hero-quote blockquote{
-  margin:0;color:#f3f4f5;font-size:.98rem;line-height:1.55;
-  transition:opacity .5s ease;
-}
-.hero-quote cite{
-  display:block;font-style:normal;color:rgba(240,247,246,.88);
-  font-size:.85rem;margin-top:8px;
-}
-.hero-anim .hero-eyebrow,.hero-anim h1,.hero-anim .hero-sub,.hero-anim .hero-ctas,.hero-anim .hero-quote{
+.hero-rating .stars{color:#f5c542;letter-spacing:2px}
+.hero-rating b{font-family:'Outfit',sans-serif}
+@media (max-width:760px){.hero-rating{border-radius:var(--radius)}}
+.hero-anim .hero-eyebrow,.hero-anim h1,.hero-anim .hero-sub,.hero-anim .hero-ctas,.hero-anim .hero-rating{
   opacity:0;transform:translateY(22px);
   animation:riseIn .8s var(--ease) forwards;
 }
 .hero-anim h1{animation-delay:.12s}
 .hero-anim .hero-sub{animation-delay:.22s}
 .hero-anim .hero-ctas{animation-delay:.32s}
-.hero-anim .hero-quote{animation-delay:.44s}
+.hero-anim .hero-rating{animation-delay:.44s}
 @keyframes riseIn{to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){
-  .hero-anim .hero-eyebrow,.hero-anim h1,.hero-anim .hero-sub,.hero-anim .hero-ctas,.hero-anim .hero-quote{animation:none;opacity:1;transform:none}
+  .hero-anim .hero-eyebrow,.hero-anim h1,.hero-anim .hero-sub,.hero-anim .hero-ctas,.hero-anim .hero-rating{animation:none;opacity:1;transform:none}
   .hero-slide{transition:none}
 }
 @media (max-width:760px){
-  .hero-inner{padding:120px 0 48px}
+  .hero-inner{padding:120px 20px 48px}
+  .hero-pause{top:80px;bottom:auto;right:16px}
   .hero-sub{font-size:1.04rem}
 }
 
@@ -327,8 +342,6 @@ footer .logo b{color:#c9ced3}
   background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
   overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--shadow);
 }
-.contact-map{min-height:460px}
-.contact-map iframe{width:100%;height:100%;border:0;display:block}
 .contact-info{padding:38px 38px 34px;display:flex;flex-direction:column;gap:10px}
 .contact-info h2{margin-bottom:4px}
 .contact-info>p{margin-bottom:14px}
@@ -346,10 +359,19 @@ footer .logo b{color:#c9ced3}
 }
 .socials a:hover{background:var(--accent-deep);color:#f7f8f9;transform:translateY(-2px)}
 .socials svg{width:19px;height:19px}
+.contact-cta{background:var(--dark);padding:38px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.contact-cta-head{font-family:'Outfit',sans-serif;font-weight:600;color:#ffffff;font-size:1.25rem;margin:0 0 6px}
+.btn-big{height:64px;font-size:1.08rem;width:100%;white-space:normal;text-align:center}
+.contact-cta-note{color:rgba(247,248,249,.7);font-size:.92rem;margin:6px 0 0}
+.map-section{background:var(--bone);padding:0 0 84px}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);height:420px}
+.map iframe{width:100%;height:100%;border:0;display:block}
 @media (max-width:880px){
   .contact-card{grid-template-columns:1fr}
-  .contact-map{min-height:320px;order:2}
-  .contact-info{order:1}
+  .contact-cta{padding:30px 24px}
+  .contact-info{padding:30px 24px}
+  .map{height:320px}
+  .map-section{padding-bottom:60px}
 }
 
 /* ---------- footer ---------- */
@@ -492,7 +514,7 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
         027 250 0842
       </a>
     </div>
-    <button class="burger" aria-label="Open menu" aria-expanded="false" id="burger">
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" id="burger">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -510,9 +532,15 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-slide on" style="background-image:url('img/hero-van.jpg')" role="img" aria-label="Two branded bsp plumbing vans parked at the Gisborne workshop"></div>
-    <div class="hero-slide" style="background-image:url('img/hero-1.jpg')" role="img" aria-label="Plumber brazing a copper pipe joint"></div>
-    <div class="hero-slide" style="background-image:url('img/hero-2.jpg')" role="img" aria-label="Galvanised pipework, valves and a gas meter on a brick wall"></div>
+    <div class="hero-slides" id="heroSlides">
+      <img class="hero-slide on" src="img/hero-van-1920.webp" srcset="img/hero-van-1080.webp 1080w, img/hero-van-1920.webp 1920w, img/hero-van-3840.webp 3840w" sizes="100vw" width="3840" height="2161" alt="Blake's two bsp-branded plumbing vans, roof racks loaded, outside the workshop" fetchpriority="high">
+      <img class="hero-slide" src="img/hero-bathroom-1920.webp" srcset="img/hero-bathroom-1080.webp 1080w, img/hero-bathroom-1920.webp 1920w, img/hero-bathroom-3840.webp 3840w" sizes="100vw" width="3840" height="2560" alt="A plumber working in a modern tiled bathroom" loading="lazy">
+      <img class="hero-slide" src="img/hero-sink-1920.webp" srcset="img/hero-sink-1080.webp 1080w, img/hero-sink-1920.webp 1920w, img/hero-sink-3840.webp 3840w" sizes="100vw" width="3840" height="2880" alt="A plumber fitting waste pipework under a basin" loading="lazy">
+    </div>
+    <button class="hero-pause" id="pauseBtn" type="button" aria-pressed="false" aria-label="Pause the photo slideshow">
+      <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+    </button>
     <div class="hero-badge">
       <img src="img/bsp-logo-light.png" alt="bsp" width="900" height="557">
       <span>Plumbing Drainage Gasfitting</span>
@@ -528,11 +556,10 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
         </a>
         <a class="btn btn-ghost" href="#contact">Get a quote</a>
       </div>
-      <div class="hero-quote" id="heroQuote" aria-live="polite">
-        <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote id="quoteText">Fantastic plumber. Great friendly service, and very knowledgeable. I would highly recommend.</blockquote>
-        <cite id="quoteName">Verified customer, Yellow NZ</cite>
-      </div>
+      <a class="hero-rating" href="#reviews">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span><b>5.0</b> rated on Yellow NZ: "Fantastic plumber, very knowledgeable"</span>
+      </a>
     </div>
   </section>
 
@@ -541,11 +568,11 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
     <div class="wrap">
       <div class="sec-head reveal">
         <h2>What Blake can sort for you</h2>
-        <p>From ten-minute fixes to full renovations, priced up front and left tidy.</p>
+        <p>Plumbing, gasfitting and drainage under one roof. From ten-minute fixes to full renovations, priced up front and left tidy.</p>
       </div>
       <div class="svc-grid">
         <article class="svc-card reveal">
-          <img src="img/svc-taps.jpg" alt="Chrome mixer tap over a stainless steel kitchen sink" width="1000" height="750" loading="lazy">
+          <img src="img/svc-taps-1080.webp" srcset="img/svc-taps-1080.webp 1080w, img/svc-taps-1920.webp 1920w" sizes="(max-width:620px) 100vw, (max-width:960px) 50vw, 360px" alt="Chrome kitchen mixer tap over a stainless double sink" width="1920" height="1440" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
@@ -556,7 +583,7 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-hotwater.jpg" alt="Plumber working on the pipework of a hot water cylinder" width="1000" height="750" loading="lazy">
+          <img src="img/svc-hotwater-1080.webp" srcset="img/svc-hotwater-1080.webp 1080w, img/svc-hotwater-1920.webp 1920w" sizes="(max-width:620px) 100vw, (max-width:960px) 50vw, 360px" alt="Hot water and heating pipework with valves and gauges" width="1920" height="1440" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v2m4-2v2m4-2v2M5 8h14a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a1 1 0 0 1 1-1z"/></svg>
@@ -567,10 +594,10 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-toilets.jpg" alt="Plumber servicing a toilet cistern in a bathroom" width="1000" height="750" loading="lazy">
+          <img src="img/svc-toilets-1080.webp" srcset="img/svc-toilets-1080.webp 1080w, img/svc-toilets-1920.webp 1920w" sizes="(max-width:620px) 100vw, (max-width:960px) 50vw, 360px" alt="Plumber in work gloves fitting a wall-hung toilet" width="1920" height="1440" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10v6H7zM5 9h14v2a7 7 0 0 1-7 7 7 7 0 0 1-7-7zM10 18v3h4v-3"/></svg>
               Toilets
             </span>
             <h3>Toilets &amp; cisterns</h3>
@@ -578,7 +605,7 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-bathrooms.jpg" alt="Chrome bath mixer and hand shower fitted to a bath" width="1000" height="750" loading="lazy">
+          <img src="img/svc-bathrooms-1080.webp" srcset="img/svc-bathrooms-1080.webp 1080w, img/svc-bathrooms-1920.webp 1920w" sizes="(max-width:620px) 100vw, (max-width:960px) 50vw, 360px" alt="Modern grey bathroom with bath, vanity and wall-hung toilet" width="1920" height="1440" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16a1 1 0 0 1 1 1 6 6 0 0 1-6 6H9a6 6 0 0 1-6-6 1 1 0 0 1 1-1zM6 12V5a2 2 0 0 1 4 0"/></svg>
@@ -589,25 +616,25 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-maintenance.jpg" alt="Tray of plumbing spanners and wrenches" width="1000" height="750" loading="lazy">
+          <img src="img/svc-gas-1080.webp" srcset="img/svc-gas-1080.webp 1080w, img/svc-gas-1920.webp 1920w" sizes="(max-width:620px) 100vw, (max-width:960px) 50vw, 360px" alt="Gas meter, regulator and pipework on a brick wall" width="1920" height="1440" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-              Maintenance
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5.5C10 8 11 9 11 10c1-2 1-5 1-8z"/></svg>
+              Gasfitting
             </span>
-            <h3>General maintenance</h3>
-            <p>Small jobs welcome. Slow drains, noisy pipes, dodgy spouting and the list of little fixes you've been putting off.</p>
+            <h3>Gasfitting</h3>
+            <p>Gas hobs, califonts and continuous-flow hot water connected and checked by a gasfitter, with the paperwork sorted.</p>
           </div>
         </article>
         <article class="svc-card reveal">
-          <img src="img/svc-newbuilds.jpg" alt="Plumber connecting waste pipework under a new basin" width="1000" height="750" loading="lazy">
+          <img src="img/svc-drains-1080.webp" srcset="img/svc-drains-1080.webp 1080w, img/svc-drains-1920.webp 1920w" sizes="(max-width:620px) 100vw, (max-width:960px) 50vw, 360px" alt="New blue water main and valves laid in an open trench" width="1920" height="1440" loading="lazy">
           <div class="svc-body">
             <span class="svc-tag">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 9.5V21h5v-6h4v6h5V9.5"/></svg>
-              New builds
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h18M7 7v10M17 7v10"/></svg>
+              Drainage
             </span>
-            <h3>New builds &amp; renovations</h3>
-            <p>Pipework planned and priced from your plans, roughed in on schedule and signed off without drama.</p>
+            <h3>Drainlaying &amp; new builds</h3>
+            <p>Blocked drains, new connections and pipework for new builds, priced from your plans and roughed in on schedule.</p>
           </div>
         </article>
       </div>
@@ -618,12 +645,12 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
   <section class="section" id="about">
     <div class="wrap about-grid">
       <div class="about-photo reveal">
-        <img src="img/about.jpg" alt="The two branded bsp plumbing vans outside the Gisborne workshop" width="1200" height="900" loading="lazy">
+        <img src="img/about-van-1080.webp" srcset="img/about-van-1080.webp 1080w, img/about-van-1920.webp 1920w" sizes="(max-width:860px) 100vw, 480px" alt="Blake's two bsp plumbing vans outside the workshop, signwritten Plumbing, Drainage, Gasfitting" width="1920" height="1440" loading="lazy">
         <div class="about-corner">Whataupoko,<br>Gisborne</div>
       </div>
       <div class="reveal">
         <h2>The local on the other end of the phone</h2>
-        <p>Blake Solomon Plumbing is run from Whataupoko and works right across Gisborne and the coast. You deal with Blake from the first call to the final invoice: one plumber who knows your job, not a call centre.</p>
+        <p>Blake has been running bsp since 2014, from Whataupoko out across Gisborne and the coast. Plumbing, drainage and gasfitting all come from the same van, so you deal with Blake from the first call to the final invoice: one tradie who knows your job, not a call centre.</p>
         <p>Most work here comes from repeat customers and word of mouth around town. That only happens when jobs are done once, done properly and left clean.</p>
         <ul class="checklist">
           <li>
@@ -647,7 +674,6 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
   <section class="section crew" id="crew">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="badge">Example team</span>
         <h2>Who turns up to your place</h2>
       </div>
       <div class="crew-grid">
@@ -685,7 +711,7 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
           <blockquote>"Fantastic plumber. Great friendly service, and very knowledgeable. I would highly recommend."</blockquote>
           <div class="rev-meta">
             <span class="rev-name">Verified customer</span>
-            <span class="rev-src">Review on Yellow NZ</span>
+            <span class="rev-src">Yellow NZ review, February 2017</span>
           </div>
         </article>
         <article class="rev-card reveal">
@@ -705,9 +731,9 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
           </div>
         </article>
       </div>
-      <p class="rev-note reveal">The starred examples above show how this section works once connected to Google. The Yellow review is real. <a href="https://www.google.com/maps/search/?api=1&amp;query=Blake%20Solomon%20Plumbing%20Gisborne" target="_blank" rel="noopener">See our Google reviews</a></p>
+      <p class="rev-note reveal">The first review is a real one from Blake's Yellow NZ listing. The two marked as examples show how this section looks once Google reviews start coming in. <a href="https://yellow.co.nz/gisborne/bpp/blake-solomon-plumbing-579438904#reviews" target="_blank" rel="noopener">Read it on Yellow</a></p>
       <div class="reveal" style="margin-top:18px">
-        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Blake%20Solomon%20Plumbing%20Gisborne" target="_blank" rel="noopener">See all our Google reviews</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/place/?q=place_id:ChIJPcrHaRV4Zm0RzLKsd-B8Yc4" target="_blank" rel="noopener">See all our Google reviews</a>
       </div>
     </div>
   </section>
@@ -719,7 +745,7 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
         <h2>Had Blake around recently?</h2>
         <p>A quick Google review helps other Gisborne locals find a plumber they can trust.</p>
       </div>
-      <a class="btn btn-accent" href="https://www.google.com/maps/search/?api=1&amp;query=Blake%20Solomon%20Plumbing%20Gisborne" target="_blank" rel="noopener">Leave us a review</a>
+      <a class="btn btn-light" href="https://search.google.com/local/writereview?placeid=ChIJPcrHaRV4Zm0RzLKsd-B8Yc4" target="_blank" rel="noopener">Leave us a review</a>
     </div>
   </section>
 
@@ -771,22 +797,9 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
   <section class="section contact" id="contact">
     <div class="wrap">
       <div class="contact-card reveal">
-        <div class="contact-map">
-          <iframe title="Map showing Blake Solomon Plumbing, 202 Whitaker Street, Whataupoko, Gisborne" src="https://www.google.com/maps?q=Blake+Solomon+Plumbing,+202+Whitaker+Street,+Whataupoko,+Gisborne+4010&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
         <div class="contact-info">
           <h2>Get Blake on the phone</h2>
           <p>Call for anything urgent. For quotes, flick through an email with a couple of photos and a rough idea of the job.</p>
-          <div class="contact-btns">
-            <a class="btn btn-accent" href="tel:+64272500842">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Call Blake Solomon Plumbing
-            </a>
-            <a class="btn btn-dark" data-gmail data-user="blake" data-domain="bsp.co.nz" data-su="Plumbing%20quote" href="#contact">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-              Email Blake Solomon Plumbing
-            </a>
-          </div>
           <div class="c-row">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <a href="tel:+64272500842">027 250 0842</a>
@@ -810,8 +823,32 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
             <a href="https://www.instagram.com/explore/search/keyword/?q=Blake%20Solomon%20Plumbing" target="_blank" rel="noopener" aria-label="Find Blake Solomon Plumbing on Instagram">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
             </a>
+            <a href="https://www.tiktok.com/search?q=Blake%20Solomon%20Plumbing%20Gisborne" target="_blank" rel="noopener" aria-label="Search TikTok for Blake Solomon Plumbing">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
+            </a>
           </div>
         </div>
+        <div class="contact-cta">
+          <p class="contact-cta-head">Two ways to get it sorted</p>
+          <a class="btn btn-light btn-big" href="tel:+64272500842">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call for a quote
+          </a>
+          <a class="btn btn-ghost btn-big" data-gmail data-user="blake" data-domain="bsp.co.nz" data-su="Plumbing%20quote%20request" data-body="Kia%20ora%20Blake%2C%0A%0AI%27m%20after%20a%20quote%20for%3A%0A%0AAddress%3A%0ABest%20number%20to%20reach%20me%3A%0A%0AThanks" href="#">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            Email Blake the job
+          </a>
+          <p class="contact-cta-note">The email button opens a ready-to-go message in Gmail. Add a photo or two and hit send.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section" aria-label="Map">
+    <div class="wrap">
+      <div class="map">
+        <iframe title="Map showing Blake Solomon Plumbing, 202 Whitaker Street, Whataupoko, Gisborne" src="https://www.google.com/maps?q=Blake+Solomon+Plumbing,+202+Whitaker+Street,+Whataupoko,+Gisborne+4010&amp;ll=-38.6565658,178.0301267&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -837,9 +874,10 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
         <a href="#contact">Contact</a>
       </div>
       <div class="foot-links">
-        <span class="foot-head">Legal</span>
+        <span class="foot-head">Links</span>
         <a href="terms.html">Terms &amp; Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
+        <a href="https://search.google.com/local/writereview?placeid=ChIJPcrHaRV4Zm0RzLKsd-B8Yc4" target="_blank" rel="noopener">Leave a Google review</a>
       </div>
       <div>
         <span class="foot-head">Follow</span>
@@ -849,6 +887,9 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
           </a>
           <a href="https://www.instagram.com/explore/search/keyword/?q=Blake%20Solomon%20Plumbing" target="_blank" rel="noopener" aria-label="Find Blake Solomon Plumbing on Instagram">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+                  <a href="https://www.tiktok.com/search?q=Blake%20Solomon%20Plumbing%20Gisborne" target="_blank" rel="noopener" aria-label="Search TikTok for Blake Solomon Plumbing">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
           </a>
         </div>
       </div>
@@ -873,35 +914,27 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
     setTimeout(function(){intro.classList.add('done');},2200);
   }
 
-  /* hero slide rotation */
-  var slides=document.querySelectorAll('.hero-slide');
-  if(slides.length>1&&!reduced){
-    var s=0;
-    setInterval(function(){
-      slides[s].classList.remove('on');
-      s=(s+1)%slides.length;
-      slides[s].classList.add('on');
-    },6000);
+  /* hero slide rotation with pause/play */
+  var slides=document.querySelectorAll('#heroSlides .hero-slide');
+  var pauseBtn=document.getElementById('pauseBtn');
+  var s=0,timer=null;
+  function next(){
+    slides[s].classList.remove('on');
+    s=(s+1)%slides.length;
+    slides[s].classList.add('on');
   }
-
-  /* hero review quote rotation */
-  var quotes=[
-    {t:"Fantastic plumber. Great friendly service, and very knowledgeable. I would highly recommend.",n:"Verified customer, Yellow NZ"},
-    {t:"Rang about our hot water cylinder at 8am and Blake had it swapped by the afternoon.",n:"Marama T., Kaiti (example)"},
-    {t:"Turned up when he said he would, every single time. You learn not to take that for granted.",n:"Steve H., Wainui (example)"}
-  ];
-  var qt=document.getElementById('quoteText'),qn=document.getElementById('quoteName');
-  if(qt&&qn&&!reduced){
-    var qi=0;
-    setInterval(function(){
-      qt.style.opacity='0';qn.style.opacity='0';
-      setTimeout(function(){
-        qi=(qi+1)%quotes.length;
-        qt.textContent=quotes[qi].t;
-        qn.textContent=quotes[qi].n;
-        qt.style.opacity='1';qn.style.opacity='1';
-      },500);
-    },6500);
+  function play(){ if(!timer&&slides.length>1){timer=setInterval(next,6000);} }
+  function stop(){ clearInterval(timer);timer=null; }
+  function setPaused(p){
+    if(p){stop();}else{play();}
+    if(pauseBtn){
+      pauseBtn.setAttribute('aria-pressed',p?'true':'false');
+      pauseBtn.setAttribute('aria-label',p?'Play the photo slideshow':'Pause the photo slideshow');
+    }
+  }
+  setPaused(reduced);
+  if(pauseBtn){
+    pauseBtn.addEventListener('click',function(){ setPaused(pauseBtn.getAttribute('aria-pressed')!=='true'); });
   }
 
   /* scroll reveals */
@@ -923,9 +956,15 @@ footer .logo .logo-text span{color:rgba(247,248,249,.62)}
     burger.addEventListener('click',function(){
       var open=menu.classList.toggle('open');
       burger.setAttribute('aria-expanded',open?'true':'false');
+      burger.setAttribute('aria-label',open?'Close menu':'Open menu');
     });
     menu.querySelectorAll('a').forEach(function(a){
       a.addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');});
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&menu.classList.contains('open')){
+        menu.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.focus();
+      }
     });
   }
 
